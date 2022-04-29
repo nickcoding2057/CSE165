@@ -1,0 +1,17 @@
+void MainWindow::mouseMoveEvent(QMouseEvent *event)
+{
+    float xAtRelease = event->x();
+    float yAtRelease = event->y();
+
+    float dx = xAtRelease - lastX;
+    float dy = yAtRelease - lastY;
+
+    float x = ui->label_2->x();
+    float y = ui->label_2->y();
+
+    ui->label_2->move(QPoint(x + dx, y + dy));
+
+    lastX = event->x();
+    lastY = event->y();
+
+}
