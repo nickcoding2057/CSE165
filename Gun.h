@@ -11,6 +11,15 @@ class Gun{
 
 void Gun::rotate(int theta)
 {
+    if (theta < 0)
+    {
+        theta = 0;
+    }
+    // you cant draw past the screen
+    if (theta > 90)
+    {
+        theta = 90;
+    }
     x = r* cos(theta);
     y = r* sin(theta);
 }
