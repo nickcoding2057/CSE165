@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
 
     scene->addItem(gun);
 
-    gun->setTransformOriginPoint(QPoint(0, 0));
-    gun->setRotation(5);
+    //gun->setTransformOriginPoint(QPoint(0, 0));
+    //gun->setRotation(5);
 
     gun->setFlag(QGraphicsItem::ItemIsFocusable);
     gun->setFocus();
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
     QGraphicsView * view = new QGraphicsView(scene);
 
-    view->setFixedSize(500, 400);
+    //view->setFixedSize(500, 400);
 
     //view->setSceneRect(0, 0, 10, 100);
     //view->fitInView(0, 0, 10, 100, Qt::KeepAspectRatio);
