@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     QGraphicsScene * scene = new QGraphicsScene ();
 
     Gun * gun = new Gun();
-    gun->setRect(800, 150, 10, 100);
+    gun->setRect(0, 0, 10, -100);
 
     scene->addItem(gun);
 
