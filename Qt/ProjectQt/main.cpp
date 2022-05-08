@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     QGraphicsScene * scene = new QGraphicsScene ();
 
     Gun * gun = new Gun();
-    gun->setRect(0, 0, 10, -100);
+    gun->setRect(0, 0, 25, -150);
 
     scene->addItem(gun);
 
@@ -31,7 +31,9 @@ int main(int argc, char *argv[])
 
     QGraphicsView * view = new QGraphicsView(scene);
 
-    //view->setFixedSize(500, 400);
+    view->setFixedSize(700, 700);
+
+    gun->setPos(600, 500);
 
     //view->setSceneRect(0, 0, 10, 100);
     //view->fitInView(0, 0, 10, 100, Qt::KeepAspectRatio);
