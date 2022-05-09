@@ -1,10 +1,11 @@
 #include <Bullet.h>
-#include <QTimer>(
+#include <QTimer>
 #include <QtMath>
+#include <QGraphicsScene>
 #include <QDebug>
 
 Bullet::Bullet(int fireAngle){
-    setRect(0, 0, 10, 50);
+    setRect(0, 0, 5, 25);
     this->fireAngle = fireAngle;
     setRotation(fireAngle);
     QTimer * timer = new QTimer();
@@ -25,5 +26,11 @@ void Bullet::move(){
 
     setPos(x()+xMove, y()-yMove);
     //qDebug() << xMove << " : " << yMove << "\n";
+
+    if(pos().y() + 25 < 0 || pos().x() + 25 < 0){
+        scene()->removeItem(this);
+        delete this;
+        qDebug() << "deleted \n";
+    }
 
 }

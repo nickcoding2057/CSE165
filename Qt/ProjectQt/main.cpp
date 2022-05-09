@@ -5,8 +5,8 @@
 #include <QGraphicsScene>
 #include <QGraphicsRectItem>
 #include <QGraphicsView>
-
-
+#include <QTimer>
+#include <QObject>
 
 int main(int argc, char *argv[])
 {
@@ -43,6 +43,11 @@ int main(int argc, char *argv[])
     //view->fitInView(0, 0, 10, 100, Qt::KeepAspectRatio);
 
     view->show();
+
+    //spawn birds
+    QTimer * timer = new QTimer();
+    QObject::connect(timer,SIGNAL(timeout()),gun,SLOT(spawn()));
+    timer->start(2000);
 
     return a.exec();
 }
