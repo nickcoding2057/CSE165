@@ -5,7 +5,7 @@
 #include <QObject>
 
 
-class Gun: public QGraphicsRectItem{
+class Gun: public QObject, public QGraphicsRectItem{
     Q_OBJECT
 public:
     void keyPressEvent(QKeyEvent * event);

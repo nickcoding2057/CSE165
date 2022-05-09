@@ -8,11 +8,12 @@
 Bird::Bird():QObject(), QGraphicsRectItem()
 {
     //set random position
-    int random_number = rand() % 700;
-    setPos(random_number,0);
+    int random_number = rand() % 300;
 
     //draw the rect
-    setRect(0,0,100,100);
+    setRect(0,0,50,30);
+    setPos(850, random_number);
+
 
     //connect
     QTimer * timer = new QTimer(this);
@@ -24,9 +25,13 @@ Bird::Bird():QObject(), QGraphicsRectItem()
 
 void Bird::move(){
     //move birds down
-    setPos(x(),y()-1);
-    if(pos().y() + rect().height() < 0){
+
+
+
+    setPos(x()-10,y());
+    if(pos().x() < -100){
         scene()->removeItem(this);
         delete this;
+        qDebug() << "deleted Bird \n";
     }
 }

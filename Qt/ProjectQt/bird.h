@@ -4,9 +4,8 @@
 #include <QGraphicsRectItem>
 #include <QObject>
 
-class Bird: public QObject,public QGraphicsRectItem
-{
-        Q_OBJECT
+class Bird: public QObject, public QGraphicsRectItem{
+    Q_OBJECT
 public:
     Bird();
 public slots:

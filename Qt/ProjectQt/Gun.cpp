@@ -4,19 +4,19 @@
 #include <QGraphicsRotation>
 #include <QGraphicsScene>
 #include <QDebug>
-#include <Bird.h>
+#include "Bird.h"
 
 
 void Gun::keyPressEvent(QKeyEvent *event){
     if(event->key() == Qt::Key_Right && angle <= -3){
         //if(angle <= 0){
-            angle+= 2;
+            angle+= 5;
             setRotation(angle);
             qDebug() << angle;
         //}
     } else if(event->key() == Qt::Key_Left && angle > -90){
         //if(!(angle < -89)){
-            angle-= 2;
+            angle-= 5;
             setRotation(angle);
             qDebug() << angle;
         //}

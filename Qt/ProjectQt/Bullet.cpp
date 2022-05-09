@@ -3,6 +3,7 @@
 #include <QtMath>
 #include <QGraphicsScene>
 #include <QDebug>
+#include "bird.h"
 
 Bullet::Bullet(int fireAngle){
     setRect(0, 0, 5, 25);
@@ -20,9 +21,21 @@ Bullet::Bullet(int fireAngle){
 }
 
 void Bullet::move(){
+
+    QList<QGraphicsItem *> colliding_items = collidingItems();
+    for(int i = 0, n = colliding_items.size(); i < n; i++){
+        if(typeid(*(colliding_items[i])) == typeid(Bird)){
+            scene()->removeItem(colliding_items[i]);
+            scene()->removeItem(this);
+            delete colliding_items[i];
+            delete this;
+            return;
+        }
+    }
+
     float fireRads = (fireAngle * M_PI) / 180;
-    float xMove = 20 * qSin(fireRads);
-    float yMove = 20 * qCos(fireRads);
+    float xMove = 50 * qSin(fireRads);
+    float yMove = 50 * qCos(fireRads);
 
     setPos(x()+xMove, y()-yMove);
     //qDebug() << xMove << " : " << yMove << "\n";

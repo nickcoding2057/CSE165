@@ -32,8 +32,9 @@ int main(int argc, char *argv[])
     QGraphicsView * view = new QGraphicsView(scene);
 
     view->setFixedSize(700, 700);
+    scene->setSceneRect(0, 0, 700, 700);
 
-    gun->setPos(600, 500);
+    gun->setPos(650, 650);
 
     view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
