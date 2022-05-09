@@ -4,6 +4,7 @@
 #include <QGraphicsRotation>
 #include <QGraphicsScene>
 #include <QDebug>
+#include <Bird.h>
 
 
 void Gun::keyPressEvent(QKeyEvent *event){
@@ -24,4 +25,11 @@ void Gun::keyPressEvent(QKeyEvent *event){
         scene()->addItem(bullet);
         bullet->setPos(x(), y());
     }
+}
+
+void Gun::spawn(){
+    //create a bird
+    Bird * bird = new Bird();
+    scene()->addItem(bird);
+
 }
