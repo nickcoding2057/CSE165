@@ -1,11 +1,13 @@
 #include "Gun.h"
+#include "Bullet.h"
 #include <QKeyEvent>
 #include <QGraphicsRotation>
+#include <QGraphicsScene>
 #include <QDebug>
 
 
 void Gun::keyPressEvent(QKeyEvent *event){
-    if(event->key() == Qt::Key_Right && angle < 0){
+    if(event->key() == Qt::Key_Right && angle <= -3){
         //if(angle <= 0){
             angle+= 2;
             setRotation(angle);
@@ -17,5 +19,9 @@ void Gun::keyPressEvent(QKeyEvent *event){
             setRotation(angle);
             qDebug() << angle;
         //}
+    } else if(event->key() == Qt::Key_Space){
+        Bullet * bullet = new  Bullet(angle);
+        scene()->addItem(bullet);
+        bullet->setPos(x(), y());
     }
 }

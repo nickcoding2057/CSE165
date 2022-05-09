@@ -35,6 +35,10 @@ int main(int argc, char *argv[])
 
     gun->setPos(600, 500);
 
+    view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+
     //view->setSceneRect(0, 0, 10, 100);
     //view->fitInView(0, 0, 10, 100, Qt::KeepAspectRatio);
 
