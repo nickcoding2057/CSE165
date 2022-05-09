@@ -1,0 +1,14 @@
+debug/BirdTypes.o
+debug/Bullet.o
+debug/BulletCount.o
+debug/BulletsLeft.o
+debug/Game.o
+debug/Gun.o
+debug/Score.o
+debug/bird.o
+debug/main.o
+debug/mainwindow.o
+debug/moc_Bullet.o
+debug/moc_Gun.o
+debug/moc_bird.o
+debug/moc_mainwindow.o

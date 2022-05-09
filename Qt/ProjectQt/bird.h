@@ -8,8 +8,9 @@ class Bird: public QObject, public QGraphicsRectItem{
     Q_OBJECT
 public:
     Bird();
+    virtual void hit() { };
 public slots:
-    void move();
+    virtual void move();
 };
 
 #endif // BIRD_H

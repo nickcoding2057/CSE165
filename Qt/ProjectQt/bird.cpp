@@ -32,6 +32,6 @@ void Bird::move(){
     if(pos().x() < -100){
         scene()->removeItem(this);
         delete this;
-        qDebug() << "deleted Bird \n";
+        //qDebug() << "deleted Bird \n";
     }
 }

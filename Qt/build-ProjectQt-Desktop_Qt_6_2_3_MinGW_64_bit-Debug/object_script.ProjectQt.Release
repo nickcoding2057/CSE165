@@ -1,0 +1,14 @@
+release/BirdTypes.o
+release/Bullet.o
+release/BulletCount.o
+release/BulletsLeft.o
+release/Game.o
+release/Gun.o
+release/Score.o
+release/bird.o
+release/main.o
+release/mainwindow.o
+release/moc_Bullet.o
+release/moc_Gun.o
+release/moc_bird.o
+release/moc_mainwindow.o
