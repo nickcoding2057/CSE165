@@ -11,12 +11,14 @@ CONFIG += c++11
 SOURCES += \
     Bullet.cpp \
     Gun.cpp \
+    bird.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     Bullet.h \
     Gun.h \
+    bird.h \
     mainwindow.h
 
 FORMS += \
