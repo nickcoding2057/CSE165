@@ -20,13 +20,13 @@ void Gun::keyPressEvent(QKeyEvent *event){
         //if(angle <= 0){
             angle+= 5;
             setRotation(angle);
-            qDebug() << angle;
+            //qDebug() << angle;
         //}
     } else if(event->key() == Qt::Key_Left && angle > 0){
         //if(!(angle < -89)){
             angle-= 5;
             setRotation(angle);
-            qDebug() << angle;
+            //qDebug() << angle;
         //}
     } else if(event->key() == Qt::Key_Space && bulletNum > 0){
         Bullet * bullet = new  Bullet(angle - 90);
@@ -40,7 +40,7 @@ void Gun::keyPressEvent(QKeyEvent *event){
         bulletNum--;
         game->bulletsLeft->decrease();
         //game->bulletCount->Delete();
-        qDebug() << bulletNum << "\n";
+        //qDebug() << bulletNum << "\n";
     }
 }
 
@@ -55,8 +55,10 @@ void Gun::spawn(){
         gameOver->setPos(250, 300);
         gameOver->setDefaultTextColor(Qt::red);
         gameOver->setFont(QFont("times", 20));
-        scene()->addItem(gameOver);
-
+        int count = 0;
+        if(count < 0){
+            scene()->addItem(gameOver);
+        }
 //        QPushButton* replay = new QPushButton();
 //        replay->setText(QString("Play Again?"));
 //        replay->move(250, 350);
