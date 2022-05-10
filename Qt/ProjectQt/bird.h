@@ -2,9 +2,10 @@
 #define BIRD_H
 
 #include <QGraphicsRectItem>
+#include <QGraphicsPixmapItem>
 #include <QObject>
 
-class Bird: public QObject, public QGraphicsRectItem{
+class Bird: public QObject, public QGraphicsPixmapItem{
     Q_OBJECT
 public:
     Bird();

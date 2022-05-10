@@ -3,19 +3,30 @@
 #include "BulletsLeft.h"
 #include <QTimer>
 #include <QGraphicsTextItem>
+#include <QPalette>
 #include <QFont>
+#include <QImage>
+extern Game * game;
+void restart(){
+    game->gun->bulletNum = 20;
+
+}
 
 Game::Game(QWidget *parent){
     scene = new QGraphicsScene ();
     scene->setSceneRect(0, 0, 700, 700);
+    setBackgroundBrush(QBrush(QImage(":/images/background4")));
     setScene(scene);
     setFixedSize(700, 700);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     gun = new Gun();
-    gun->setRect(0, 0, 25, -150);
+    //gun->setRect(0, 0, 25, -150);
+    gun->setPixmap(QPixmap(":/images/gun2.png"));
     gun->setPos(650, 650);
+    gun->setRotation(90);
+    gun->setScale(-0.1);
     gun->setFlag(QGraphicsItem::ItemIsFocusable);
     gun->setFocus();
     scene->addItem(gun);

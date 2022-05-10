@@ -11,9 +11,10 @@
 extern Game * game;
 
 Bullet::Bullet(int fireAngle){
-    setRect(0, 0, 5, 25);
+    setPixmap(QPixmap(":/images/bullet.png"));
     this->fireAngle = fireAngle;
     setRotation(fireAngle);
+    setScale(0.05);
     QTimer * timer = new QTimer();
     connect(timer, SIGNAL(timeout()), this,SLOT(move()));
 
@@ -42,8 +43,8 @@ void Bullet::move(){
     }
 
     float fireRads = (fireAngle * M_PI) / 180;
-    float xMove = 50 * qSin(fireRads);
-    float yMove = 50 * qCos(fireRads);
+    float xMove = 75 * qSin(fireRads);
+    float yMove = 75 * qCos(fireRads);
 
     setPos(x()+xMove, y()-yMove);
     //qDebug() << xMove << " : " << yMove << "\n";

@@ -11,13 +11,15 @@ defaultBird::defaultBird(){
     int random_number = rand() % 300;
 
     //draw the rect
-    setRect(0,0,100,70);
+    setPixmap(QPixmap(":/images/bird2"));
+    setScale(0.05);
+
     setPos(850, random_number);
 
-    pen.setBrush(Qt::NoBrush);
-    setPen(pen);
+//    pen.setBrush(Qt::NoBrush);
+//    setPen(pen);
 
-    setBrush(Qt::black);
+//    setBrush(Qt::black);
 
 
     //connect
@@ -48,13 +50,17 @@ sacredBird::sacredBird(){
     int random_number = rand() % 300;
 
     //draw the rect
-    setRect(0,0,100,70);
+    //setRect(0,0,100,70);
+    setPixmap(QPixmap(":/images/bird4"));
+    setScale(0.2);
+
     setPos(850, random_number);
 
-    pen.setBrush(Qt::NoBrush);
-    setPen(pen);
 
-    setBrush(Qt::darkRed);
+//    pen.setBrush(Qt::NoBrush);
+  //  setPen(pen);
+
+    //setBrush(Qt::darkRed);
 
 
     //connect
@@ -84,13 +90,17 @@ bonusBird::bonusBird(){
     int random_number = rand() % 300;
 
     //draw the rect
-    setRect(0,0,90,70);
+    //setRect(0,0,90,70);
+    setPixmap(QPixmap(":/images/bird3"));
+    setScale(0.2);
+
     setPos(850, random_number);
 
-    pen.setBrush(Qt::NoBrush);
-    setPen(pen);
 
-    setBrush(Qt::cyan);
+    //pen.setBrush(Qt::NoBrush);
+    //setPen(pen);
+
+    //setBrush(Qt::cyan);
 
 
     //connect
@@ -121,13 +131,17 @@ goldenBird::goldenBird(){
     int random_number = rand() % 300;
 
     //draw the rect
-    setRect(0,0,50,40);
+    //setRect(0,0,50,40);
+    setPixmap(QPixmap(":/images/bird5"));
+    setScale(0.2);
+
     setPos(850, random_number);
 
-    pen.setBrush(Qt::NoBrush);
-    setPen(pen);
 
-    setBrush(Qt::yellow);
+//    pen.setBrush(Qt::NoBrush);
+  //  setPen(pen);
+
+    //setBrush(Qt::yellow);
 
 
     //connect
@@ -144,7 +158,7 @@ void goldenBird::hit(){
 }
 
 void goldenBird::move(){
-    setPos(x()-20,y());
+    setPos(x()-15,y());
     if(pos().x() < -100){
         scene()->removeItem(this);
         delete this;

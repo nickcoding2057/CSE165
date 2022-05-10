@@ -8,6 +8,7 @@ debug/Score.o
 debug/bird.o
 debug/main.o
 debug/mainwindow.o
+debug/qrc_resources.o
 debug/moc_Bullet.o
 debug/moc_Gun.o
 debug/moc_bird.o

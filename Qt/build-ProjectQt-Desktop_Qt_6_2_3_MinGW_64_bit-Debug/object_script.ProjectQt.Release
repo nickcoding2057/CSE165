@@ -8,6 +8,7 @@ release/Score.o
 release/bird.o
 release/main.o
 release/mainwindow.o
+release/qrc_resources.o
 release/moc_Bullet.o
 release/moc_Gun.o
 release/moc_bird.o

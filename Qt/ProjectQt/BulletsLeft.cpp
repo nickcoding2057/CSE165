@@ -9,7 +9,7 @@ BulletsLeft::BulletsLeft(/*QGraphicsItem* parent*/){
     num = 20;//game->gun->bulletNum;
     setPlainText(QString("Bullets: " + QString::number(num)));
     setDefaultTextColor(Qt::blue);
-    setFont(QFont("times", 16));
+    setFont(QFont("times", 20));
     setPos(550, 650);
 }
 

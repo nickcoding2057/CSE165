@@ -5,13 +5,13 @@
 #include <stdlib.h> //rand() -> really large int
 
 #include <QDebug>
-Bird::Bird():QObject(), QGraphicsRectItem()
+Bird::Bird():QObject(), QGraphicsPixmapItem()
 {
     //set random position
     int random_number = rand() % 300;
 
     //draw the rect
-    setRect(0,0,50,30);
+    //setRect(0,0,50,30);
     setPos(850, random_number);
 
 
