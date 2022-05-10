@@ -15,6 +15,7 @@ public:
     void keyPressEvent(QKeyEvent * event);
     int bulletNum = 20;
     int angle = 90;
+    int count = 0;
     QGraphicsTextItem* gameOver = new QGraphicsTextItem();
     //QPushButton* replay = new QPushButton();
     //QGraphicsProxyWidget *text = new QGraphicsProxyWidget;

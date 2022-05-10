@@ -55,10 +55,10 @@ void Gun::spawn(){
         gameOver->setPos(250, 300);
         gameOver->setDefaultTextColor(Qt::red);
         gameOver->setFont(QFont("times", 20));
-        int count = 0;
-        if(count < 0){
+        if(count <= 0){
             scene()->addItem(gameOver);
         }
+        count++;
 //        QPushButton* replay = new QPushButton();
 //        replay->setText(QString("Play Again?"));
 //        replay->move(250, 350);
